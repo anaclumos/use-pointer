@@ -8,47 +8,25 @@ const Index = () => {
   const td2 = `py-2 pl-2 font-mono text-xs text-light-blue-600 whitespace-pre overflow-auto w-1/2`
 
   return (
-    <div className='container mx-auto min-w-0 flex-auto px-4 sm:px-6 xl:px-8 pt-10 pb-24 lg:pb-16'>
+    <div className='container flex-auto min-w-0 px-4 pt-10 pb-24 mx-auto sm:px-6 xl:px-8 lg:pb-16'>
       <Head>
         <title>usePointer</title>
       </Head>
       <div>
         <div className='pb-10'>
-          <h1 className='inline-block text-3xl font-extrabold text-gray-900 tracking-tight font-mono'>
+          <h1 className='inline-block font-mono text-3xl font-extrabold tracking-tight text-gray-900'>
             usePointer()
           </h1>
         </div>
         <table className='w-full text-left border-collapse'>
           <thead>
             <tr>
-              <th
-                className='
-              z-20
-              sticky
-              top-0
-              text-sm
-              font-semibold
-              text-gray-600
-              bg-white
-              p-0
-            '
-              >
+              <th className='sticky top-0 z-20 p-0 text-sm font-semibold text-gray-600 bg-white'>
                 <div className='pb-2 pr-2 border-b border-gray-200'>
                   Property
                 </div>
               </th>
-              <th
-                className='
-              z-20
-              sticky
-              top-0
-              text-sm
-              font-semibold
-              text-gray-600
-              bg-white
-              p-0
-            '
-              >
+              <th className='sticky top-0 z-20 p-0 text-sm font-semibold text-gray-600 bg-white'>
                 <div className='pb-2 pl-2 border-b border-gray-200'>
                   Value
                 </div>
