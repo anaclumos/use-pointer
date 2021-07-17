@@ -2,7 +2,10 @@ import Head from 'next/head'
 import usePointer from '../hooks/usePointer'
 
 const Index = () => {
-  const properties = usePointer()
+  const properties = usePointer({
+    throttle: 100,
+    debounce: 100,
+  })
 
   return (
     <div className='container flex-auto min-w-0 px-4 pt-10 pb-24 mx-auto sm:px-6 xl:px-8 lg:pb-16'>

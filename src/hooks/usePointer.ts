@@ -1,7 +1,14 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { PointerEventType } from '../types'
+import { debounce } from 'lodash'
+import _ from 'lodash'
 
-const usePointer = () => {
+type usePointerOptions = {
+  throttle: number | null
+  debounce: number | null
+}
+
+const usePointer = (options: usePointerOptions) => {
   const [pointer, setPointer] = useState<PointerEventType>({
     pointerId: undefined,
     width: undefined,
@@ -63,15 +70,31 @@ const usePointer = () => {
       shiftKey: e.shiftKey,
     })
   }
+
+  const updatePointerPositionDebounced = debounce(
+    updatePointerPosition,
+    options.debounce ? options.debounce : 0
+  )
+
   useEffect(() => {
     window.addEventListener(
       'pointermove',
-      updatePointerPosition
+      options.debounce
+        ? updatePointerPositionDebounced
+        : _.throttle(
+            updatePointerPosition,
+            options.throttle ? options.throttle : 0
+          )
     )
     return () =>
       window.removeEventListener(
         'pointermove',
-        updatePointerPosition
+        options.debounce
+          ? updatePointerPositionDebounced
+          : _.throttle(
+              updatePointerPosition,
+              options.throttle ? options.throttle : 0
+            )
       )
   }, [])
   return pointer
