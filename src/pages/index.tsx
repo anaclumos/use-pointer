@@ -4,9 +4,6 @@ import usePointer from '../hooks/usePointer'
 const Index = () => {
   const properties = usePointer()
 
-  const td1 = `py-2 pr-2 font-mono text-xs text-violet-600 whitespace-nowrap overflow-auto w-1/2`
-  const td2 = `py-2 pl-2 font-mono text-xs text-light-blue-600 whitespace-pre overflow-auto w-1/2`
-
   return (
     <div className='container flex-auto min-w-0 px-4 pt-10 pb-24 mx-auto sm:px-6 xl:px-8 lg:pb-16'>
       <Head>
@@ -38,10 +35,16 @@ const Index = () => {
               const [key, value] = entry
               return (
                 <tr key={key}>
-                  <td translate='no' className={td1}>
+                  <td
+                    translate='no'
+                    className='w-1/2 py-2 pr-2 overflow-auto font-mono text-xs text-purple-600 whitespace-nowrap'
+                  >
                     {key}
                   </td>
-                  <td translate='no' className={td2}>
+                  <td
+                    translate='no'
+                    className='w-1/2 py-2 pl-2 overflow-auto font-mono text-xs text-blue-600 whitespace-pre'
+                  >
                     {value}
                   </td>
                 </tr>
