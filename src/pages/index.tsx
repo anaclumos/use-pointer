@@ -45,7 +45,7 @@ const Index = () => {
                     translate='no'
                     className='w-1/2 py-2 pl-2 overflow-auto font-mono text-xs text-blue-600 whitespace-pre'
                   >
-                    {value}
+                    {String(value)}
                   </td>
                 </tr>
               )
