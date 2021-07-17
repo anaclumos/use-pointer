@@ -1,219 +1,77 @@
 import Head from 'next/head'
 import usePointer from '../hooks/usePointer'
-
 const index = () => {
-  const {
-    pointerEventPointerId,
-    pointerEventWidth,
-    pointerEventHeight,
-    pointerEventPressure,
-    pointerEventTangentialPressure,
-    pointerEventTiltX,
-    pointerEventTiltY,
-    pointerEventTwist,
-    pointerEventPointerType,
-    pointerEventIsPrimary,
-    mouseEventAltKey,
-    mouseEventButton,
-    mouseEventButtons,
-    mouseEventClientX,
-    mouseEventClientY,
-    mouseEventCtrlKey,
-    mouseEventMetaKey,
-    mouseEventMovementX,
-    mouseEventMovementY,
-    mouseEventOffsetX,
-    mouseEventOffsetY,
-    mouseEventPageX,
-    mouseEventPageY,
-    mouseEventRelatedTarget,
-    mouseEventScreenX,
-    mouseEventScreenY,
-    mouseEventShiftKey,
-  } = usePointer()
+  const properties = usePointer()
+
+  const td1 = `py-2 pr-2 font-mono text-xs text-violet-600 whitespace-nowrap overflow-auto w-1/2`
+  const td2 = `py-2 pl-2 font-mono text-xs text-light-blue-600 whitespace-pre overflow-auto w-1/2`
+
   return (
-    <>
+    <div className='container mx-auto min-w-0 flex-auto px-4 sm:px-6 xl:px-8 pt-10 pb-24 lg:pb-16'>
       <Head>
-        <title>React Pointer Position</title>
+        <title>usePointer</title>
       </Head>
       <div>
-        <h1>usePointer()</h1>
-
-        <table>
+        <div className='pb-10'>
+          <h1 className='inline-block text-3xl font-extrabold text-gray-900 tracking-tight font-mono'>
+            usePointer()
+          </h1>
+        </div>
+        <table className='w-full text-left border-collapse'>
           <thead>
             <tr>
-              <th>Property</th>
-              <th>Value</th>
+              <th
+                className='
+              z-20
+              sticky
+              top-0
+              text-sm
+              font-semibold
+              text-gray-600
+              bg-white
+              p-0
+            '
+              >
+                <div className='pb-2 pr-2 border-b border-gray-200'>
+                  Property
+                </div>
+              </th>
+              <th
+                className='
+              z-20
+              sticky
+              top-0
+              text-sm
+              font-semibold
+              text-gray-600
+              bg-white
+              p-0
+            '
+              >
+                <div className='pb-2 pl-2 border-b border-gray-200'>
+                  Value
+                </div>
+              </th>
             </tr>
           </thead>
-
           <tbody>
-            <tr>
-              <td>
-                <code>pointerEventPointerId</code>
-              </td>
-              <td>{pointerEventPointerId}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>pointerEventWidth</code>
-              </td>
-              <td>{pointerEventWidth}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>pointerEventHeight</code>
-              </td>
-              <td>{pointerEventHeight}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>pointerEventPressure</code>
-              </td>
-              <td>{pointerEventPressure}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>pointerEventTangentialPressure</code>
-              </td>
-              <td>{pointerEventTangentialPressure}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>pointerEventTiltX</code>
-              </td>
-              <td>{pointerEventTiltX}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>pointerEventTiltY</code>
-              </td>
-              <td>{pointerEventTiltY}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>pointerEventTwist</code>
-              </td>
-              <td>{pointerEventTwist}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>pointerEventPointerType</code>
-              </td>
-              <td>{pointerEventPointerType}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>pointerEventIsPrimary</code>
-              </td>
-              <td>{pointerEventIsPrimary}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>mouseEventAltKey</code>
-              </td>
-              <td>{mouseEventAltKey}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>mouseEventButton</code>
-              </td>
-              <td>{mouseEventButton}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>mouseEventButtons</code>
-              </td>
-              <td>{mouseEventButtons}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>mouseEventClientX</code>
-              </td>
-              <td>{mouseEventClientX}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>mouseEventClientY</code>
-              </td>
-              <td>{mouseEventClientY}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>mouseEventCtrlKey</code>
-              </td>
-              <td>{mouseEventCtrlKey}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>mouseEventMetaKey</code>
-              </td>
-              <td>{mouseEventMetaKey}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>mouseEventMovementX</code>
-              </td>
-              <td>{mouseEventMovementX}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>mouseEventMovementY</code>
-              </td>
-              <td>{mouseEventMovementY}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>mouseEventOffsetX</code>
-              </td>
-              <td>{mouseEventOffsetX}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>mouseEventOffsetY</code>
-              </td>
-              <td>{mouseEventOffsetY}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>mouseEventPageX</code>
-              </td>
-              <td>{mouseEventPageX}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>mouseEventPageY</code>
-              </td>
-              <td>{mouseEventPageY}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>mouseEventRelatedTarget</code>
-              </td>
-              <td>{mouseEventRelatedTarget}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>mouseEventScreenX</code>
-              </td>
-              <td>{mouseEventScreenX}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>mouseEventScreenY</code>
-              </td>
-              <td>{mouseEventScreenY}</td>
-            </tr>
-            <tr>
-              <td>
-                <code>mouseEventShiftKey</code>
-              </td>
-              <td>{mouseEventShiftKey}</td>
-            </tr>
+            {Object.entries(properties).map((entry) => {
+              const [key, value] = entry
+              return (
+                <tr key={key}>
+                  <td translate='no' className={td1}>
+                    {key}
+                  </td>
+                  <td translate='no' className={td2}>
+                    {value}
+                  </td>
+                </tr>
+              )
+            })}
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   )
 }
 
