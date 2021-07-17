@@ -1,6 +1,6 @@
 # usePointer
 
-React Hooks that binds HTML5 MouseEvents to React Components
+React Hooks that binds HTML5 PointerEvents to React Components
 
 ## Demo
 
@@ -48,3 +48,5 @@ const {
 ```
 
 or visit [`./src/pages/index.tsx`](./src/pages/index.tsx)
+
+For property types and info, visit [`./src/types/index.ts`](./src/types/index.ts)
