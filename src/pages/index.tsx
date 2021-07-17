@@ -3,8 +3,8 @@ import usePointer from '../hooks/usePointer'
 
 const Index = () => {
   const properties = usePointer({
-    throttle: 100,
-    debounce: 100,
+    throttle: 10,
+    debounce: 0,
   })
 
   return (
