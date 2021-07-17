@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import usePointer from '../hooks/usePointer'
-const index = () => {
+
+const Index = () => {
   const properties = usePointer()
 
   const td1 = `py-2 pr-2 font-mono text-xs text-violet-600 whitespace-nowrap overflow-auto w-1/2`
@@ -75,4 +76,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index
